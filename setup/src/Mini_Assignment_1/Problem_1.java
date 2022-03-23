@@ -11,11 +11,14 @@ public class Problem_1 {
         String chromDriverPath = "C:\\Users\\mayakaushik\\Desktop\\selenium\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", chromDriverPath);
         WebDriver driver = new ChromeDriver();
-        final String URL = "https://phptravels.com/";
+        final String URL = "https://www.phptravels.net/hotels";
         driver.get(URL);
-        WebElement logo = driver.findElement(By.id("icon"));
-        WebElement home = driver.findElement(By.className("cls-1"));
-        WebElement signupBtn = driver.findElement(By.cssSelector("lvl-0 signup-free btn btn-md btn-white-outline open"));
+        driver.findElement(By.className("logo"));
+        driver.findElement(By.linkText("home"));
+        driver.findElement(By.linkText("flights"));
+        driver.findElement(By.linkText("Tours"));
+        driver.findElement(By.linkText("Company "));
+        
     }
 }
 
