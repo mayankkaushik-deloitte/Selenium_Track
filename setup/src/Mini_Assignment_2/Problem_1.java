@@ -17,7 +17,7 @@ public class Problem_1 {
     public static void navigate(WebDriver driver){
         final String URL = "https://phptravels.com/demo";
         driver.get(URL);
-        WebElement title = driver.findElement(By.xpath("//strong//parent::h4[@class='main-title go-right h3']"));
+        WebElement title = driver.findElement(By.xpath("//*[@id=\"PHPTRAVELS\"]"));
         if(check(title)){
             System.out.println("Pass");
         }else{
@@ -30,7 +30,7 @@ public class Problem_1 {
         WebElement loginButton = driver.findElement(By.xpath("//a[text()='Login']"));
         driver.navigate().to("https://phptravels.org/login");
         WebElement loginTitle = driver.findElement(By.xpath("//a[@class='logo visible-xs visible-sm visible-md']//child::img[@title='PHPTRAVELS']"));
-        if(check(loginTitle)){
+        if(driver.getTitle().equals("PHPTRAVELS")){
             System.out.println("Pass");
         }else{
             System.out.println("Fail");
