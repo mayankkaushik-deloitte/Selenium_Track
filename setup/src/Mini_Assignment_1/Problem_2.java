@@ -13,10 +13,10 @@ public class Problem_2 {
         driver.get(URL);
         driver.findElement(By.xpath("//input[@name='checkin']"));
         driver.findElement(By.xpath("//input[@name='checkout']"));
-        driver.findElement(By.xpath("//i[@class='la la-minus']/following::i[3]"));
-        driver.findElement(By.xpath("//i[@class='la la-plus']/following::i[3]"));
-        driver.findElement(By.xpath("//i[@class='la la-minus']/following::i[4]"));
-        driver.findElement(By.xpath("//i[@class='la la-plus']/following::i[4]"));
+        driver.findElement(By.xpath("//i[@class='la la-minus']//following::i[3]"));
+        driver.findElement(By.xpath("//i[@class='la la-plus']//following::i[3]"));
+        driver.findElement(By.xpath("//i[@class='la la-minus']//following::i[4]"));
+        driver.findElement(By.xpath("//i[@class='la la-plus']//following::i[4]"));
 
     }
 

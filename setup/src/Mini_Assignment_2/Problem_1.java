@@ -28,16 +28,16 @@ public class Problem_1 {
     public static void login(WebDriver driver){
         driver.findElement(By.xpath("//a[text()='Login']")).click();
         WebElement loginButton = driver.findElement(By.xpath("//a[text()='Login']"));
-        driver.navigate().to("https://phptravels.com/login");
-        WebElement loginTitle = driver.findElement(By.xpath("//a[@class='logo hidden-sm hidden-xs hidden-md']//child::img[@title='PHPTRAVELS']"));
+        driver.navigate().to("https://phptravels.org/login");
+        WebElement loginTitle = driver.findElement(By.xpath("//a[@class='logo visible-xs visible-sm visible-md']//child::img[@title='PHPTRAVELS']"));
         if(check(loginTitle)){
             System.out.println("Pass");
         }else{
             System.out.println("Fail");
         }
-//        driver.navigate().back();
+        driver.navigate().back();
         System.out.println(driver.getCurrentUrl());
-        driver.findElement(By.id("//a[text()='Pricing']")).click();
+        driver.findElement(By.xpath("//a[text()='Pricing']")).click();
         driver.navigate().back();
         driver.navigate().refresh();
         driver.quit();
