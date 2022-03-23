@@ -18,7 +18,8 @@ public class Problem_1 {
         driver.findElement(By.linkText("flights"));
         driver.findElement(By.linkText("Tours"));
         driver.findElement(By.linkText("Company "));
-        
+        driver.findElement(By.className("theme-btn theme-btn-small waves-effect"));
+        driver.findElement(By.className("theme-btn theme-btn-small theme-btn-transparent ml-1 waves-effect"));
     }
 }
 
