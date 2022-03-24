@@ -19,6 +19,7 @@ public class Problem_1 {
         driver.get(URL);
         driver.findElement(By.xpath("//li//child::a[text()='Frames']")).click();
         driver.findElement(By.xpath("//a[text()='Nested Frames']")).click();
+        driver.switchTo().frame(0);
         WebElement title = driver.findElement(By.xpath("//body[contains(text(),'LEFT')]"));
         title.getText();
     }

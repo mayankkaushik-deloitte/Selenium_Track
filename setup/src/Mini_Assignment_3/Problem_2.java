@@ -18,6 +18,7 @@ public class Problem_2 {
     public static void navigate(WebDriver driver){
         final String URL = "https://jqueryui.com/droppable/";
         driver.get(URL);
+        driver.switchTo().frame(0);
         WebElement from = driver.findElement(By.xpath("//div[@id='draggable']"));
         WebElement to = driver.findElement(By.xpath("//div[@id='droppable']"));
         Actions act = new Actions(driver);
