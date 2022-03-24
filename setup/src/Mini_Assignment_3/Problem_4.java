@@ -26,5 +26,8 @@ public class Problem_4 {
         }
         driver.findElement(By.xpath("//div[@aria-label='Fri Jun 24 2022']")).click();
         driver.findElement(By.xpath("//div[@aria-label='Fri Jul 08 2022']")).click();
+        driver.findElement(By.xpath("//span[@class='fswTrvl__done']")).click();
+        driver.findElement(By.xpath("//a[@class='sc-dtMgUX daltrV']")).click();
+        driver.findElement(By.xpath("//span[text()='SEARCH FLIGHTS']")).click();
     }
 }
