@@ -14,9 +14,10 @@ public class Problem_4 {
         navigate(driver);
     }
     public static void navigate(WebDriver driver){
-        final String URL = "https://www.goibibo.com/";
+        final String URL = "https://www.goibibo.com/flights/";
         driver.get(URL);
         driver.findElement(By.xpath("//span[text()='Round-trip']")).click();
+        driver.findElement(By.xpath("//input")).click();
         driver.findElement(By.xpath("//input")).sendKeys("New York");
         driver.findElement(By.xpath("//ul[@id='autoSuggest-list']//child::li[@tabindex='0']//child::div[@class='sc-iAKWXU iyyKqe']")).click();
         driver.findElement(By.xpath("//div[@class='sc-cidDSM dOEpbS']//child::input")).sendKeys("Seattle");

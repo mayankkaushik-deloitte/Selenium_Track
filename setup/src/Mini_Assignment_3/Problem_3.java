@@ -21,12 +21,13 @@ public class Problem_3 {
         final String URL = "https://the-internet.herokuapp.com/";
         driver.get(URL);
         driver.findElement(By.xpath("//li//child::a[text()='JavaScript Alerts']")).click();
-        driver.findElement(By.xpath("//li//child::button[text()='Click for JS Alert']")).click();
+        driver.findElement(By.xpath("//li//child::button[text()='Click for JS Prompt']")).click();
         Alert alert = driver.switchTo().alert();
         alert.getText();
         alert.sendKeys("Text");
         alert.accept();
         String res = driver.findElement(By.xpath("//p[@id='result']")).getText();
+        System.out.println(res);
         if(!check(res)){
             System.out.println("Wrong Input");
         }else{
@@ -40,7 +41,8 @@ public class Problem_3 {
             i++;
         }
         i += 2;
-        String temp = res.substring(i,n - 1);
+        String temp = res.substring(i,n);
+        System.out.println(temp);
         if(!temp.equals("Text"))return false;
 
         return true;
