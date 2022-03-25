@@ -14,6 +14,6 @@ public class LoginPageTest extends SenarioTest{
         String userName = sheet.getRow(1).getCell(0).getStringCellValue();
         String password = sheet.getRow(1).getCell(1).getStringCellValue();
         LoginPageClass login = new LoginPageClass();
-        login.logFun()
+        login.logFun(userName,password);
     }
 }
