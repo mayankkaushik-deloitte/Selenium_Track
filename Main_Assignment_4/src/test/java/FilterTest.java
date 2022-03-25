@@ -21,4 +21,20 @@ public class FilterTest {
         //click on add to cart
         driver.findElement(By.xpath("//div[@class='pricebar']//button[@id='add-to-cart-sauce-labs-backpack']")).click();
     }
+    public void clickOnCart(){
+        driver.findElement(By.xpath("//*[@id='root']//div/div/div/div/div[3]/a")).click();
+    }
+    public void clickOnContinueShopping(){
+        driver.findElement(By.xpath("//div[@class='cart_footer']//button[@name='continue-shopping']")).click();
+    }
+    public void filterMinimum(){
+        //click on filter
+        driver.findElement(By.xpath("//div[@class='right_component']//span//select")).click();
+
+        //click on pice low to high
+        driver.findElement(By.xpath("//div[@class='right_component']//span//select//option[3]")).click();
+
+        //click on the add to cart
+        driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-onesie']")).click();
+    }
 }
